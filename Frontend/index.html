@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Actividades</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <h1>Gestor de Actividades</h1>
+
+    <!-- Registrar: el formulario manda por POST a la ruta /tarea del servidor -->
+    <h2>Registrar actividad</h2>
+
+    <form action="/tarea" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" maxlength="60" required>
+
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="descripcion" name="descripcion" maxlength="150" required>
+
+        <label for="estado">Estado</label>
+        <!-- Los tres estados son los unicos validos. El servidor
+             los vuelve a revisar, esto es solo para comodidad. -->
+        <select id="estado" name="estado" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="En proceso">En proceso</option>
+            <option value="Terminada">Terminada</option>
+        </select>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Consultar: esta tabla empieza vacia. script.js la llena pidiendo
+         las tareas al servidor cuando carga la pagina. -->
+    <h2>Actividades registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+                <th>Cambiar estado</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            <!-- aqui entran las filas desde script.js -->
+        </tbody>
+    </table>
+
+    <p id="total"></p>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

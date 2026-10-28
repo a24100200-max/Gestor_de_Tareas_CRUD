@@ -1,0 +1,12 @@
+{
+  "name": "gestor-tareas",
+  "version": "1.0.0",
+  "description": "Gestor de actividades con lista enlazada y archivo de texto",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

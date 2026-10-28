@@ -1,0 +1,4 @@
+1|Preparar reporte mensual|Juntar las ventas de octubre y pasarlas a la hoja de calculo|Terminada
+2|Revisar inventario de bodega|Contar el material que quedo y anotar lo que falta|En proceso
+3|Actualizar lista de proveedores|Verificar telefonos y correos de los proveedores activos|Pendiente
+4|Crear BD en MySQL|Realizar la BD requerida para el programa de la pagina web|Terminada
